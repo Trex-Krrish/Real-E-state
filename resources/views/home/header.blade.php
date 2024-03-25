@@ -1,29 +1,15 @@
 <header class="header" data-header>
-
     <div class="overlay" data-overlay></div>
 
     <div class="header-top">
         <div class="container">
-
-            <ul class="header-top-list">
-
-                <li>
-                    <a href="mailto:info@homeverse.com" class="header-top-link">
-                        <ion-icon name="mail-outline"></ion-icon>
-
-                        <span>info@homeverse.com</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" class="header-top-link">
-                        <ion-icon name="location-outline"></ion-icon>
-
-                        <address>15/A, Nest Tower, NYC</address>
-                    </a>
-                </li>
-
-            </ul>
+            @auth
+                <ul class="header-top-list">
+                    <li class="header-top-link">
+                        Welcome {{ auth()->user()->fname }}
+                    </li>
+                </ul>
+            @endauth
 
             <div class="wrapper">
                 <ul class="header-top-social-list">
@@ -126,13 +112,17 @@
 
                     <span>Profile</span>
                 </button>
-
                 <button class="header-bottom-actions-btn" aria-label="Cart">
                     <ion-icon name="cart-outline"></ion-icon>
-
                     <span>Cart</span>
                 </button>
-
+                @auth
+                    <button onclick="window.location.href='/logout'" type="submit" class="header-bottom-actions-btn"
+                        aria-label="Logout">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                        <span>Logout</span>
+                    </button>
+                @endauth
                 <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
                     <ion-icon name="menu-outline"></ion-icon>
 
