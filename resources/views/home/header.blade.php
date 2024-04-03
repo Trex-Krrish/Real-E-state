@@ -40,7 +40,7 @@
 
                 </ul>
 
-                <button class="header-top-btn">Add Listing</button>
+                <button onclick="window.location.href='/sell';" class="header-top-btn">Sell House</button>
             </div>
 
         </div>
