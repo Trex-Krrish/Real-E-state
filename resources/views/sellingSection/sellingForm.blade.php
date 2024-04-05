@@ -9,12 +9,16 @@
         <option value="Condo">Condo</option>
         <!-- Add more options as needed -->
     </select><br><br>
-    
+
     <label for="sellingType">Selling Type:</label><br>
     <select id="sellingType" name="sellingType" required>
         <option value="sale">For Sale</option>
         <option value="rent">For Rent</option>
     </select><br><br>
+
+    <label for="squareFootage">Square Footage:</label><br>
+    <input type="number" id="squareFootage" name="squareFootage" required><br><br>
+
 
     <label for="bedrooms">Number of Bedrooms:</label><br>
     <input type="number" id="bedrooms" name="bedrooms" required><br><br>

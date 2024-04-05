@@ -17,6 +17,7 @@ class SellingController extends Controller
       $validatedData = $request->validate([
          'propertyType' => 'required',
          'sellingType' => 'required|string|in:sale,rent',
+         'squareFootage' => 'required|integer',
          'bedrooms' => 'required|integer',
          'bathrooms' => 'required|integer',
          'yearBuilt' => 'required|integer',
@@ -40,6 +41,7 @@ class SellingController extends Controller
 
       $house->property_type = $validatedData['propertyType'];
       $house->selling_type = $validatedData['sellingType'];
+      $house->square_footage = $validatedData['squareFootage'];
       $house->bedrooms = $validatedData['bedrooms'];
       $house->bathrooms = $validatedData['bathrooms'];
       $house->year_built = $validatedData['yearBuilt'];

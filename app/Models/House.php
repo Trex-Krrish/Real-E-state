@@ -12,6 +12,7 @@ class House extends Model
     protected $fillable = [
         'property_type',
         'selling_type',
+        'squareFootage',
         'bedrooms',
         'bathrooms',
         'square_footage',

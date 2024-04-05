@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('property_type');
             $table->string('selling_type');
+            $table->integer('square_footage');
             $table->integer('bedrooms');
             $table->integer('bathrooms');
             $table->integer('year_built');
