@@ -59,7 +59,7 @@ class SellingController extends Controller
 
       if ($request->hasFile('propertyPhotos')) {
          foreach ($request->file('propertyPhotos') as $photo) {
-            $path = $photo->store('house_photos');
+            $path = $photo->store('house_photos', 'public');
             $house->photos()->create([
                'path' => $path,
             ]);

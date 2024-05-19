@@ -15,7 +15,8 @@ Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/buy', [BuyingController::class, 'index'])->name('buy.index');
+    Route::post('/buy', [BuyingController::class, 'search'])->name('buy.search');
+    
     Route::get('/sell', [SellingController::class, 'index'])->name('sell.index');
-
     Route::post('/sell', [SellingController::class, 'store'])->name('sell.store');
 });

@@ -8,7 +8,7 @@
               <p class="card-text">We can help you realize your dream of a new home</p>
             </div>
 
-            <button class="btn cta-btn">
+            <button onclick="window.location.href='/buy';" class="btn cta-btn">
               <span>Explore Properties</span>
 
               <ion-icon name="arrow-forward-outline"></ion-icon>

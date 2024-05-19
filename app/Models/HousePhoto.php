@@ -10,12 +10,18 @@ class HousePhoto extends Model
     use HasFactory;
 
     protected $fillable = [
-        'path', // Assuming you only need to store the path of the photo
+        'path', 
+        'house_id'
     ];
 
-    // Define any relationships here, if needed
+    
     public function house()
     {
         return $this->belongsTo(House::class);
+    }
+
+    static function getPhoto($houseId)
+    {
+        return HousePhoto::where('house_id', $houseId)->first();
     }
 }
